@@ -54,13 +54,13 @@
                       }}</span>
                     </div>
                     <div class="d-flex flex-wrap">
-                      <a
+                      <!-- <a
                         href="/demo/vuexy-vuejs-admin-dashboard-template/demo-1/apps/users/edit/21"
                         class="btn btn-primary"
                         target="_self"
-                      >
-                        Edit </a
-                      ><button
+                      > --> <b-link :to="{ name: 'EditCompany', params: { id: this.companyRecord.id } }"  class="btn btn-primary">Edit </b-link>
+                        
+                      <button
                         type="button"
                         class="btn ml-1 btn-outline-danger"
                       >
@@ -261,8 +261,45 @@
 
 <script>
 import axios from "@/libs/axios";
+import {
+  BCard,
+  BRow,
+  BCol,
+  BFormInput,
+  BButton,
+  BTable,
+  BMedia,
+  BAvatar,
+  BLink,
+  BBadge,
+  BDropdown,
+  BDropdownItem,
+  BPagination,
+  BTooltip,
+  BProgress,
+} from "bootstrap-vue";
 
 export default {
+  components: {
+    
+    BTable,
+    BProgress,
+    BBadge,
+    BButton,
+    BLink,
+    BCard,
+    BRow,
+    BCol,
+    BFormInput,
+    BButton,
+    BTable,
+    BMedia,
+    BAvatar,
+    BDropdown,
+    BDropdownItem,
+    BPagination,
+    BTooltip,
+  },
   data() {
     return {
       companyID: "",
